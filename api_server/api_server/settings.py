@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_multiple_model',
 
-    # my apps
+    # my app10
     'profiles_api',
 ]
 
@@ -115,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'CET'
 
 USE_I18N = True
 

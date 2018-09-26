@@ -71,6 +71,12 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 
-class UserProfileDetail(models.Model):
-    id = models.ForeignKey('UserProfile', on_delete=models.CASCADE, primary_key=True)
-    job = models.CharField(max_length=200)
+
+class ProfileFeedItem(models.Model):
+
+    user_profile = models.ForeignKey('UserProfile', on_delete=models.CASCADE)
+    status_text = models.CharField(max_length=255)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '{0}...'.format(self.status_text[:50])
